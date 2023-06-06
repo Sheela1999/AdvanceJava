@@ -14,6 +14,8 @@ public class SetRunner {
 		set.add("Lotus");
 		set.add("Lily");
 		set.add("Marigold");
+		set.add("Hibiscus");
+		set.add("Daisy");
 
 		for (String str : set) {
 			System.out.println(str);
