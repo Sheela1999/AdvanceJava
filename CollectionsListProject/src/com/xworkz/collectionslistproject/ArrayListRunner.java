@@ -59,10 +59,11 @@ public class ArrayListRunner {
 		System.out.println(list.get(8));
 		System.out.println(list.get(0));
 
-		// using indexOf methods
+		// using indexOf methods (it will give the particular index number
 		System.out.println("---------------------IndexOf----------------------------------------");
 		System.out.println(list.indexOf("Kolar"));
 		System.out.println(list.indexOf("Haveree"));
+		System.out.println(list.indexOf("Belagavi"));
 
 		// using set
 		System.out.println("-------------SET-----------------------------------");
