@@ -17,6 +17,8 @@ public class BagRunner {
 		BagDto dto2 = new BagDto("Gucci", 2000, "Travel Bag", "Red");
 
 		BagDto dto3 = new BagDto("Fendi", 1400, "Hand bag", "Gray");
+		
+		BagDto dto4 = new BagDto("Nika", 800, "Backpack", "Green");
 
 		BagDao dao = new BagDaoImpl();
 
@@ -25,6 +27,7 @@ public class BagRunner {
 		dao.save(dto1);
 		dao.save(dto2);
 		dao.save(dto3);
+		dao.save(dto4);
 
 		System.out.println("---------------------------FOUND--------------------------");
 		BagDto found = dao.find(1000);
