@@ -13,6 +13,7 @@ public class MapRunner {
 		map.put(3, "Available");
 		map.put(4, "Available");
 		map.put(5, "Not Available");
+		map.put(6, "Not Available");
 
 		System.out.println(map.put(3, "Available"));
 
