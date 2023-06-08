@@ -19,7 +19,7 @@ public class Birds {
 			System.out.println(lMap.get(i));
 		}
 		
-		System.out.println("----------Methods--------------------------------------");
+		System.out.println("----------------Methods--------------------------------------");
 
 		System.out.println(lMap.get(2));
 		System.out.println(lMap.size());
