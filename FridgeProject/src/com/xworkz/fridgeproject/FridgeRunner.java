@@ -1,7 +1,6 @@
 package com.xworkz.fridgeproject;
 
 import java.util.HashMap;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import com.xworkz.fridgeproject.constants.FridgeType;
@@ -41,10 +40,16 @@ public class FridgeRunner {
 		System.out.println("-----------------------------READ---------------------------------------");
 		HashMap<Integer, FridgeDto> res = ser.readAll();
 
-		Set<Entry<Integer, FridgeDto>> set = res.entrySet();
-
-		for (Entry<Integer, FridgeDto> entry : set) {
-			System.out.println(entry);
+//		Set<Entry<Integer, FridgeDto>> set = res.entrySet();
+//
+//		for (Entry<Integer, FridgeDto> entry : set) {
+//			System.out.println(entry);
+//		}
+		
+		Set<Integer> set = res.keySet();
+		
+		for(Integer in : set) {
+			System.out.println(res.get(in));
 		}
 
 	}

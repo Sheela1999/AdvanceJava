@@ -46,12 +46,11 @@ public class Car {
 
 		};
 
-		list.sort(comp);
+		Collections.sort(list);
+		Collections.sort(list, comp);
 		for (String str : list) {
 			System.out.println(str);
 		}
-
-		Collections.sort(list, comp);
 
 	}
 

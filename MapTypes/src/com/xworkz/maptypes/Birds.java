@@ -15,9 +15,11 @@ public class Birds {
 		lMap.put(4, "Duck");
 		lMap.put(5, "Sparrow");
 
-//		for(int i=0; i<=5; i++) {
-//			System.out.println(lMap(i));
-//		}
+		for(int i=0; i<=5; i++) {
+			System.out.println(lMap.get(i));
+		}
+		
+		
 
 		System.out.println(lMap.get(2));
 		System.out.println(lMap.size());
@@ -40,10 +42,12 @@ public class Birds {
 		tMap.put(2, "Heron");
 		tMap.put(3, "Nightingale");
 
-//		for(int j=0; j<=5; j++) {
-//			System.out.println(tMap(j));
-//		}
+		for(int j=0; j<=5; j++) {
+			System.out.println(tMap.get(j));
+		}
 
+		System.out.println("-------------Methods---------------------------------");
+		
 		System.out.println(tMap.clone());
 		System.out.println(tMap.getOrDefault(3, null));
 		System.out.println(tMap.replace(2, "Duck"));
