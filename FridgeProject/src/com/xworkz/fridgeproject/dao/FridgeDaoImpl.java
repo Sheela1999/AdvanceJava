@@ -41,4 +41,9 @@ public class FridgeDaoImpl implements FridgeDao {
 
 	}
 
+	@Override
+	public HashMap<Integer, FridgeDto> readAll() {
+		return map;
+	}
+
 }

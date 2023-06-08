@@ -1,5 +1,7 @@
 package com.xworkz.fridgeproject.service;
 
+import java.util.HashMap;
+
 import com.xworkz.fridgeproject.dao.FridgeDaoImpl;
 import com.xworkz.fridgeproject.dto.FridgeDto;
 
@@ -65,6 +67,11 @@ public class FridgeServiceImpl implements FridgeService {
 		System.out.println("key is not valid");
 		return false;
 
+	}
+
+	@Override
+	public HashMap<Integer, FridgeDto> readAll() {
+		return dao.readAll();
 	}
 
 }

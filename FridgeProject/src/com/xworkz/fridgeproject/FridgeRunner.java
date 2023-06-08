@@ -1,5 +1,9 @@
 package com.xworkz.fridgeproject;
 
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+
 import com.xworkz.fridgeproject.constants.FridgeType;
 import com.xworkz.fridgeproject.dto.FridgeDto;
 import com.xworkz.fridgeproject.service.FridgeService;
@@ -33,6 +37,15 @@ public class FridgeRunner {
 		System.out.println("-------------------------------Delete--------------------------------------");
 		boolean dlt = ser.delete(2);
 		System.out.println(dlt);
+
+		System.out.println("-----------------------------READ---------------------------------------");
+		HashMap<Integer, FridgeDto> res = ser.readAll();
+
+		Set<Entry<Integer, FridgeDto>> set = res.entrySet();
+
+		for (Entry<Integer, FridgeDto> entry : set) {
+			System.out.println(entry);
+		}
 
 	}
 
