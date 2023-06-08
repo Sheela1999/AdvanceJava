@@ -45,10 +45,10 @@ public class FridgeRunner {
 //		for (Entry<Integer, FridgeDto> entry : set) {
 //			System.out.println(entry);
 //		}
-		
-		Set<Integer> set = res.keySet();
-		
-		for(Integer in : set) {
+
+		Set<Integer> set = res.keySet();// we can use entrySet or keySet to read whole data
+
+		for (Integer in : set) {
 			System.out.println(res.get(in));
 		}
 
