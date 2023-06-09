@@ -2,9 +2,9 @@ package com.xworkz.comparableproject;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-import com.xworkz.comparableproject.dao.LawyerDao;
 import com.xworkz.comparableproject.dto.LawyerDto;
 
 public class LawyerRunner {
@@ -29,9 +29,23 @@ public class LawyerRunner {
 //		list.add(dto3);
 
 		System.out.println(list);
+		
+		Comparator<LawyerDto> comp = new Comparator<LawyerDto>() {
+
+			@Override
+			public int compare(LawyerDto o1, LawyerDto o2) {
+				if (o1.getName().length() > o2.getName().length()) {
+					return 1;
+				} else {
+					return -1;
+				}
+
+			}
+		};
 
 		System.out.println("----------------------------------------------------------------------------");
-		Collections.sort(list);
+		//Collections.sort(list,comp); for comparator
+		Collections.sort(list); // for comparable
 		for (LawyerDto dto : list) {
 			System.out.println(dto);
 		}

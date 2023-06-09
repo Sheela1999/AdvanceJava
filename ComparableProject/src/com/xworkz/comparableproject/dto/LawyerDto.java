@@ -1,8 +1,6 @@
 package com.xworkz.comparableproject.dto;
 
-import com.xworkz.comparableproject.dao.LawyerDao;
-
-public class LawyerDto implements Comparable<LawyerDto>, LawyerDao {
+public class LawyerDto implements Comparable<LawyerDto> {
 
 	private String name;
 	private int age;
@@ -69,6 +67,7 @@ public class LawyerDto implements Comparable<LawyerDto>, LawyerDao {
 				+ designation + ", salary=" + salary + "]";
 	}
 
+	// we without comparator only we have to run in runner to sort
 	@Override
 	public int compareTo(LawyerDto o) {
 		if (age > o.getAge()) {
@@ -78,13 +77,13 @@ public class LawyerDto implements Comparable<LawyerDto>, LawyerDao {
 		}
 	}
 
-	// we can't run this method
-	public int compareTo1(LawyerDto o) {
-		if (designation.length() < o.getDesignation().length()) {
-			return 1;
-		} else {
-			return -1;
-		}
-	}
+	//we can't use to methods
+//	public int compareTo1(LawyerDto o) {
+//		if (designation.length() < o.getDesignation().length()) {
+//			return 1;
+//		} else {
+//			return -1;
+//		}
+//	}
 
 }
