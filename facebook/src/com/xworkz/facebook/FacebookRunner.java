@@ -23,10 +23,10 @@ public class FacebookRunner {
 		
 		FacebookService service = new FacebookServiceImpl();
 		
-		boolean saved = service.save(dto);
-		System.out.println(saved);
+		//boolean saved = service.save(dto);
+		//System.out.println(saved);
 		
-		//service.update(dto, 1);
+		service.update(dto, 1);
 		
 		//service.readAll();
 		//service.delete(3);
