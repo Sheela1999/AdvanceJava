@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import com.xworkz.linkedinone.dto.LinkedInDto;
 
 public class LinkedInRepositoryImpl implements LinkedInRepository {
-	
+
 	@Override
 	public boolean save(LinkedInDto dto) {
 
@@ -119,14 +119,16 @@ public class LinkedInRepositoryImpl implements LinkedInRepository {
 			statement.setString(1, email);
 
 			ResultSet result = statement.executeQuery();
-			
-			if(result !=null) {
-				while(result.next()) {
-				System.out.println(result.getInt(1) + " " + result.getString(2) + " " + result.getString(3) + " " + result.getString(4) + " " + result.getString(5)
-				+ " " + result.getLong(6) + " " + result.getDate(7) + " " + result.getString(8) + " " + result.getString(9) + " " + result.getString(10) 
-				+ " " + result.getString(11) + " " + result.getInt(12) + " " + result.getString(13) + " " + result.getString(14) + " " + result.getString(15) 
-				+ " " + result.getString(16));
-			}
+
+			if (result != null) {
+				while (result.next()) {
+					System.out.println(result.getInt(1) + " " + result.getString(2) + " " + result.getString(3) + " "
+							+ result.getString(4) + " " + result.getString(5) + " " + result.getLong(6) + " "
+							+ result.getDate(7) + " " + result.getString(8) + " " + result.getString(9) + " "
+							+ result.getString(10) + " " + result.getString(11) + " " + result.getInt(12) + " "
+							+ result.getString(13) + " " + result.getString(14) + " " + result.getString(15) + " "
+							+ result.getString(16));
+				}
 			}
 
 			connection.close();
@@ -156,14 +158,16 @@ public class LinkedInRepositoryImpl implements LinkedInRepository {
 			PreparedStatement statement = connection.prepareStatement(query);
 
 			ResultSet result = statement.executeQuery();
-			
-			if(result !=null) {
-				while(result.next()) {
-				System.out.println(result.getInt(1) + " " + result.getString(2) + " " + result.getString(3) + " " + result.getString(4) + " " + result.getString(5)
-				+ " " + result.getLong(6) + " " + result.getDate(7) + " " + result.getString(8) + " " + result.getString(9) + " " + result.getString(10) 
-				+ " " + result.getString(11) + " " + result.getInt(12) + " " + result.getString(13) + " " + result.getString(14) + " " + result.getString(15) 
-				+ " " + result.getString(16));
-			}
+
+			if (result != null) {
+				while (result.next()) {
+					System.out.println(result.getInt(1) + " " + result.getString(2) + " " + result.getString(3) + " "
+							+ result.getString(4) + " " + result.getString(5) + " " + result.getLong(6) + " "
+							+ result.getDate(7) + " " + result.getString(8) + " " + result.getString(9) + " "
+							+ result.getString(10) + " " + result.getString(11) + " " + result.getInt(12) + " "
+							+ result.getString(13) + " " + result.getString(14) + " " + result.getString(15) + " "
+							+ result.getString(16));
+				}
 			}
 
 			connection.close();
@@ -236,14 +240,16 @@ public class LinkedInRepositoryImpl implements LinkedInRepository {
 			statement.setString(3, emailId);
 
 			ResultSet result = statement.executeQuery();
-			
-			if(result !=null) {
-				while(result.next()) {
-				System.out.println(result.getInt(1) + " " + result.getString(2) + " " + result.getString(3) + " " + result.getString(4) + " " + result.getString(5)
-				+ " " + result.getLong(6) + " " + result.getDate(7) + " " + result.getString(8) + " " + result.getString(9) + " " + result.getString(10) 
-				+ " " + result.getString(11) + " " + result.getInt(12) + " " + result.getString(13) + " " + result.getString(14) + " " + result.getString(15) 
-				+ " " + result.getString(16));
-			}
+
+			if (result != null) {
+				while (result.next()) {
+					System.out.println(result.getInt(1) + " " + result.getString(2) + " " + result.getString(3) + " "
+							+ result.getString(4) + " " + result.getString(5) + " " + result.getLong(6) + " "
+							+ result.getDate(7) + " " + result.getString(8) + " " + result.getString(9) + " "
+							+ result.getString(10) + " " + result.getString(11) + " " + result.getInt(12) + " "
+							+ result.getString(13) + " " + result.getString(14) + " " + result.getString(15) + " "
+							+ result.getString(16));
+				}
 			}
 
 			connection.close();
@@ -253,6 +259,5 @@ public class LinkedInRepositoryImpl implements LinkedInRepository {
 		}
 		return false;
 	}
-
 
 }

@@ -33,17 +33,17 @@ public class LinkedInRunner {
 
 		LinkedInService service = new LinkedInServiceImpl();
 
-		 //service.save(dto);
+		// service.save(dto);
 
-		 service.readByEmail("sheela@gamil.com");
+		service.readByEmail("sheela@gamil.com");
 
-		 //service.readByIdAndEmail("Ashish", 6, "mahalinked@gamil.com");
+		// service.readByIdAndEmail("Ashish", 6, "mahalinked@gamil.com");
 
-		 //service.updateByEmail("Aish", "sheelalinked@gamil.com");
+		// service.updateByEmail("Aish", "sheelalinked@gamil.com");
 
-		//service.deleteByIdAndEmail("Reid Hoffman", 2, "sheelalinked@gamil.com");
+		// service.deleteByIdAndEmail("Reid Hoffman", 2, "sheelalinked@gamil.com");
 
-		 //service.readAll();
+		// service.readAll();
 
 	}
 

@@ -3,7 +3,7 @@ package com.xworkz.linkedinone.repository;
 import com.xworkz.linkedinone.dto.LinkedInDto;
 
 public interface LinkedInRepository {
-	
+
 	public boolean save(LinkedInDto dto);
 
 	public boolean updateByEmail(String account, String email);

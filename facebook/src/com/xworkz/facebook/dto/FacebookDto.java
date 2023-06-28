@@ -6,18 +6,18 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class FacebookDto {
-	
-    private int id;
-    @NotBlank
-    @NotEmpty
-    @Size (min=3, max=50)
+
+	private int id;
+	@NotBlank
+	@NotEmpty
+	@Size(min = 3, max = 50)
 	private String firstName;
-    @NotBlank
-    @NotEmpty
-    @Size (min=3, max=50)
+	@NotBlank
+	@NotEmpty
+	@Size(min = 3, max = 50)
 	private String lastName;
-    @NotBlank
-    @NotEmpty
+	@NotBlank
+	@NotEmpty
 	private String dateOfBirth;
 	@NotBlank
 	@NotEmpty
@@ -29,7 +29,7 @@ public class FacebookDto {
 	private String gender;
 	@NotBlank
 	@NotEmpty
-	@Size (min=8, max=16)
+	@Size(min = 8, max = 16)
 	private String password;
 
 	public FacebookDto() {
@@ -48,11 +48,11 @@ public class FacebookDto {
 		this.gender = gender;
 		this.password = password;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
-	
+
 	public void setId(int id) {
 		this.id = id;
 	}

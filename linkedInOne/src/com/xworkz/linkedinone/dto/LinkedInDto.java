@@ -8,11 +8,11 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class LinkedInDto {
-	
+
 	private int id;
 	@NotBlank
 	@NotEmpty
-	@Size (min=3, max=15)
+	@Size(min = 3, max = 15)
 	private String cEO;
 	private String founders;
 	private String parentOrganization;
@@ -29,7 +29,7 @@ public class LinkedInDto {
 	private String typeOfAds;
 	@NotBlank
 	@NotEmpty
-	@Email (message = "email is not valid")
+	@Email(message = "email is not valid")
 	private String emailId;
 
 	public LinkedInDto() {

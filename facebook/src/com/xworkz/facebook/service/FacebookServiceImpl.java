@@ -19,7 +19,7 @@ public class FacebookServiceImpl implements FacebookService {
 	public boolean save(FacebookDto dto) throws ClassNotFoundException, SQLException {
 		System.out.println("saved...");
 
-		if(dto.getPhoneNumber()>0 && dto.getPhoneNumber()>=10) {
+		if (dto.getPhoneNumber() > 0 && dto.getPhoneNumber() >= 10) {
 
 			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 			Validator validator = factory.getValidator();
@@ -27,14 +27,12 @@ public class FacebookServiceImpl implements FacebookService {
 
 			if (violation.isEmpty()) {
 				boolean save = repo.save(dto);
-                System.out.println(save);
-			} 
-		else {
+				System.out.println(save);
+			} else {
 				System.out.println("Error");
 				System.out.println(violation);
 			}
-		}
-		else {
+		} else {
 			System.out.println("phone no is not valid");
 		}
 		return false;
@@ -80,7 +78,7 @@ public class FacebookServiceImpl implements FacebookService {
 
 	@Override
 	public boolean updateByEmail(String firstName, String email) throws ClassNotFoundException, SQLException {
-		
+
 		System.out.println("Updated by email");
 
 		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
@@ -94,7 +92,7 @@ public class FacebookServiceImpl implements FacebookService {
 			System.out.println("Error");
 			System.out.println(violation);
 		}
-		
+
 		return false;
 	}
 

@@ -9,21 +9,21 @@ import com.xworkz.linkedinone.dto.LinkedInDto;
 import com.xworkz.linkedinone.repository.LinkedInRepositoryImpl;
 
 public class LinkedInServiceImpl implements LinkedInService {
-	
+
 	LinkedInRepositoryImpl repo = new LinkedInRepositoryImpl();
 
 	@Override
 	public boolean save(LinkedInDto dto) {
 		System.out.println("saved..");
-		
+
 		ValidatorFactory factory = javax.validation.Validation.buildDefaultValidatorFactory();
 		javax.validation.Validator validator = factory.getValidator();
-		 Set<ConstraintViolation<LinkedInDto>> violation =validator.validate(dto);
-		
+		Set<ConstraintViolation<LinkedInDto>> violation = validator.validate(dto);
+
 		if (violation.isEmpty()) {
 			boolean save = repo.save(dto);
 			System.out.println(save);
-		}else {
+		} else {
 			System.out.println("Error");
 			System.out.println(violation);
 		}
@@ -43,10 +43,10 @@ public class LinkedInServiceImpl implements LinkedInService {
 
 	@Override
 	public boolean readByEmail(String email) {
-		//System.out.println("read by email");
-			if (email != null) {
-				repo.readByEmail(email);
-			}
+		// System.out.println("read by email");
+		if (email != null) {
+			repo.readByEmail(email);
+		}
 		return false;
 	}
 
@@ -80,6 +80,5 @@ public class LinkedInServiceImpl implements LinkedInService {
 		}
 		return false;
 	}
-
 
 }
