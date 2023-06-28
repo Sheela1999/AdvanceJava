@@ -177,13 +177,13 @@ public class EventOrgnRepositoryImpl implements EventOrgnRepository {
 			int i = stm.executeUpdate();
 			System.out.println("effected rows:" + i);
 
-			con.close();
-
 			if (i > 0) {
 				System.out.println("records updated");
 			} else {
 				System.out.println("records are not updated");
 			}
+			
+			con.close();
 
 		} catch (SQLException e) {
 
