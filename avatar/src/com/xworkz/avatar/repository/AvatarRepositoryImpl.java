@@ -57,7 +57,7 @@ public class AvatarRepositoryImpl implements AvatarRepository {
 				e.printStackTrace();
 			}
 		
-		return true;
+		return false;
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import com.xworkz.eventorganizations.service.EventOrgnServiceImpl;
 public class EventOrgnRunner {
 
 	public static void main(String[] args) {
-		
+
 		EventOrgnDTO dto = new EventOrgnDTO();
 
 		dto.setId(2);
@@ -28,17 +28,19 @@ public class EventOrgnRunner {
 
 		EventOrgnService service = new EventOrgnServiceImpl();
 
-		 //service.save(dto);
+		// service.save(dto);
 
-	      service.update(dto, 2);
+		boolean up = service.update(dto);
+		System.out.println(up);
 
-		//service.updateById(70000, 1);
+		// service.updateById(70000, 1);
 
-		//service.updateByName("Electronic City", "Birthday party");
-		
-		//service.updateByEmaiId(1500, "wonder@gmail.com");
-		
-		//service.updateByFields("Shanaya", 300, 3567890123l, "CorporateEvent", "10 AM", "Seminar");
+		// service.updateByName("Electronic City", "Birthday party");
+
+		// service.updateByEmaiId(1500, "wonder@gmail.com");
+
+		// service.updateByFields("Shanaya", 300, 3567890123l, "CorporateEvent", "10
+		// AM", "Seminar");
 
 	}
 

@@ -4,7 +4,7 @@ import com.xworkz.eventorganizations.dto.EventOrgnDTO;
 import com.xworkz.eventorganizations.repository.EventOrgnRepositoryImpl;
 
 public class EventOrgnServiceImpl implements EventOrgnService {
-	
+
 	EventOrgnRepositoryImpl repo = new EventOrgnRepositoryImpl();
 
 	@Override
@@ -42,11 +42,11 @@ public class EventOrgnServiceImpl implements EventOrgnService {
 	}
 
 	@Override
-	public boolean update(EventOrgnDTO dtos, int id) {
-		if (dtos != null) {
-			if (id != 0) {
-				repo.update(dtos, id);
-			}
+	public boolean update(EventOrgnDTO dto) {
+		if (dto != null) {
+			boolean update = repo.update(dto);
+			System.out.println(update);
+			return true;
 		}
 
 		return false;
@@ -65,13 +65,13 @@ public class EventOrgnServiceImpl implements EventOrgnService {
 	@Override
 	public boolean updateByFields(String organizedBy, int totalEvents, long phoneNo, String orgnName, String time,
 			String name) {
-		if(organizedBy != null && orgnName != null && time != null && name != null) {
-			if(totalEvents > 200) {
+		if (organizedBy != null && orgnName != null && time != null && name != null) {
+			if (totalEvents > 200) {
 				repo.updateByFields(organizedBy, totalEvents, phoneNo, orgnName, time, name);
 			}
 		}
 		return false;
-		
+
 	}
 
 }

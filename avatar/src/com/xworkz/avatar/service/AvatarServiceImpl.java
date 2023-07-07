@@ -22,7 +22,7 @@ public class AvatarServiceImpl implements AvatarService {
 				repo.update(dto, id);
 			}
 		}
-		return true;
+		return false;
 	}
 
 	

@@ -10,7 +10,7 @@ public interface EventOrgnService {
 
 	boolean updateByName(String location, String name);
 
-	boolean update(EventOrgnDTO dtos, int id);
+	boolean update(EventOrgnDTO dto);
 
 	boolean updateByEmaiId(int people, String email);
 

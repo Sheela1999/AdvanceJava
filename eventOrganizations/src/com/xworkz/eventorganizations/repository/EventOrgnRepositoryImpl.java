@@ -141,7 +141,7 @@ public class EventOrgnRepositoryImpl implements EventOrgnRepository {
 	}
 
 	@Override
-	public boolean update(EventOrgnDTO dtos, int id) {
+	public boolean update(EventOrgnDTO dto) {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -151,28 +151,27 @@ public class EventOrgnRepositoryImpl implements EventOrgnRepository {
 		}
 
 		try {
+
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/event_orgn", "root",
 					"Xworkzodc@123");
+			System.out.println(con);
 
-			String query = "update events_info set eventName=?, orgnName=?, organizedBy=?, date=?, time=?, budget=?, eventCategory=?, eventDuration=?, expectedPeople=?, rank=?, location=?, emailId=?, phoneNo=?, totalEvents=? where id=?";
+			String query = "update events_info set eventName=?, orgnName=?, organizedBy=?,date=?,time=?,budget=?, eventCategory=?,eventDuration=?,expectedPeople=? where id=3";
 
 			PreparedStatement stm = con.prepareStatement(query);
+			System.out.println(query);
 
-			stm.setString(1, dtos.getEventName());
-			stm.setString(2, dtos.getOrgnName());
-			stm.setString(3, dtos.getOrganizedBy());
-			stm.setString(4, dtos.getDate());
-			stm.setString(5, dtos.getTime());
-			stm.setInt(6, dtos.getBudget());
-			stm.setString(7, dtos.getEventCategory());
-			stm.setString(8, dtos.getEventDuration());
-			stm.setInt(9, dtos.getExpectedPeople());
-			stm.setInt(10, dtos.getRank());
-			stm.setString(11, dtos.getLocation());
-			stm.setString(12, dtos.getEmailId());
-			stm.setLong(13, dtos.getPhoneNo());
-			stm.setInt(14, dtos.getTotalEvents());
-			stm.setInt(15, id);
+			stm.setString(1, dto.getEventName());
+			stm.setString(2, dto.getOrgnName());
+			stm.setString(3, dto.getOrganizedBy());
+			stm.setString(4, dto.getDate());
+			stm.setString(5, dto.getTime());
+			stm.setInt(6, dto.getBudget());
+			stm.setString(7, dto.getEventCategory());
+			stm.setString(8, dto.getEventDuration());
+			stm.setInt(9, dto.getExpectedPeople());
+
+			System.out.println(query);
 
 			int i = stm.executeUpdate();
 			System.out.println("effected rows:" + i);
@@ -180,9 +179,10 @@ public class EventOrgnRepositoryImpl implements EventOrgnRepository {
 			if (i > 0) {
 				System.out.println("records updated");
 			} else {
-				System.out.println("records are not updated");
+				System.out.println("record not updated");
 			}
-			
+
+			stm.close();
 			con.close();
 
 		} catch (SQLException e) {
